@@ -2,34 +2,24 @@
 
 Building security infrastructure for AI agents.
 
-Creator of **SpiderShield**, **TeeShield**, and **SpiderRating**.
+Creator of **SpiderShield** and **SpiderRating**.
 
 ---
 
 ## Projects
 
 ### SpiderShield
-Runtime security layer for AI agents.
+Security toolkit for AI agents and MCP servers.
 
-Protect agent tool calls with policy enforcement, data protection, and trust intelligence.
+Static analysis, runtime protection, policy enforcement, data loss prevention, and audit trails.
 
 [![PyPI](https://img.shields.io/pypi/v/spidershield)](https://pypi.org/project/spidershield/) · [GitHub](https://github.com/teehooai/spidershield)
-
-
-### TeeShield
-Static security scanner for MCP servers and AI tools.
-
-Analyze and rate AI tool servers for vulnerabilities.
-
-[![PyPI](https://img.shields.io/pypi/v/teeshield)](https://pypi.org/project/teeshield/) · [GitHub](https://github.com/nicholasyoder/teeshield)
 
 
 ### SpiderRating
 Security index for MCP servers.
 
 Explore security scores, dependency risks, and trust graph for AI tools.
-
-*Coming soon*
 
 ---
 
