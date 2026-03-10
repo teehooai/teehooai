@@ -22,7 +22,7 @@ Security toolkit for AI agents and MCP servers.
 
 
 ### SpiderRating
-Security index and certification platform for MCP servers.
+Security index and certification platform for AI agents and tool ecosystems.
 
 - **Rating Engine** — certification scoring (F/D/C/B/A) with calibrated ground truth
 - **Enterprise Dashboard** — multi-agent fleet security visibility and management
