@@ -1,54 +1,59 @@
-## Building security infrastructure for AI agents
+# Teehoo
 
-I work on tools that help developers build safer AI agent systems — from static analysis to runtime protection.
+Building security infrastructure for AI agents.
 
-### Projects
-
-| Project | Description | |
-|---------|-------------|--|
-| [SpiderShield](https://github.com/teehooai/spidershield) | Security toolkit for AI agents — scanner, runtime guard, MCP proxy, DLP engine | [![PyPI](https://img.shields.io/pypi/v/spidershield)](https://pypi.org/project/spidershield/) |
-| [TeeShield](https://github.com/nicholasyoder/teeshield) | Static analysis linter for MCP servers — security patterns, description quality, architecture scoring | [![PyPI](https://img.shields.io/pypi/v/teeshield)](https://pypi.org/project/teeshield/) |
-| **SpiderRating** | Certification scoring engine for AI agent security — enterprise dashboard, compliance reporting | *Coming soon* |
-
-### Stack
-
-```
-┌─────────────────────────────────────────────────┐
-│             SpiderRating (Certification)         │
-│         Rating Engine · Dashboard · API          │
-├─────────────────────────────────────────────────┤
-│             SpiderShield (Runtime)                │
-│    Guard SDK · MCP Proxy · DLP · Policy Engine   │
-├─────────────────────────────────────────────────┤
-│             TeeShield (Static Analysis)          │
-│   46 issue codes · SARIF · GitHub Action         │
-└─────────────────────────────────────────────────┘
-```
-
-### Quick start
-
-```python
-from spidershield import SpiderGuard
-
-guard = SpiderGuard(policy="strict", dlp="redact")
-result = guard.before_call("file_write", {"path": "/etc/passwd", "content": data})
-# result.action == "block"  -- policy violation
-```
-
-```bash
-# Scan an MCP server for security issues
-spidershield scan path/to/server.py
-
-# Lint tool descriptions for quality
-teeshield scan path/to/mcp_server.py
-```
-
-### Focus areas
-
-- AI Agent Security — runtime protection, tool-call firewalls, policy enforcement
-- MCP Ecosystem — static analysis, certification, supply chain security
-- AI Infrastructure — observability, audit trails, data loss prevention
+Creator of **SpiderShield**, **TeeShield**, and **SpiderRating**.
 
 ---
 
-Los Angeles · [spidershield.dev](https://spidershield.dev) · [PyPI](https://pypi.org/project/spidershield/)
+## Projects
+
+### SpiderShield
+Runtime security layer for AI agents.
+
+Protect agent tool calls with policy enforcement, data protection, and trust intelligence.
+
+[![PyPI](https://img.shields.io/pypi/v/spidershield)](https://pypi.org/project/spidershield/) · [GitHub](https://github.com/teehooai/spidershield)
+
+
+### TeeShield
+Static security scanner for MCP servers and AI tools.
+
+Analyze and rate AI tool servers for vulnerabilities.
+
+[![PyPI](https://img.shields.io/pypi/v/teeshield)](https://pypi.org/project/teeshield/) · [GitHub](https://github.com/nicholasyoder/teeshield)
+
+
+### SpiderRating
+Security index for MCP servers.
+
+Explore security scores, dependency risks, and trust graph for AI tools.
+
+*Coming soon*
+
+---
+
+## Focus
+
+AI Agent Security
+AI Infrastructure
+Financial AI Systems
+Prediction Systems
+
+---
+
+## Vision
+
+AI agents will interact with tools, APIs, and systems across the internet.
+
+SpiderShield aims to provide the security infrastructure that makes this safe.
+
+---
+
+## Location
+
+Los Angeles
+
+---
+
+[spidershield.dev](https://spidershield.dev) · [PyPI](https://pypi.org/project/spidershield/)
