@@ -1,57 +1,60 @@
-# Teehoo
+# Teehoo AI
 
-Building security infrastructure for AI agents.
+Independent AI software studio. Los Angeles. Building products across agent security, AI-native martech, financial systems, and local services.
 
-Creator of **SpiderShield** and **SpiderRating**.
-
----
-
-## Projects
-
-### SpiderShield
-Security toolkit for AI agents and MCP servers.
-
-- **Static Scanner** — 46 security issue codes, vulnerability detection, SARIF output, GitHub Action
-- **Runtime Guard SDK** — tool-call firewall with policy enforcement (strict / balanced / permissive)
-- **MCP Proxy** — transparent security proxy for MCP servers
-- **DLP Engine** — PII and secret redaction for agent data flows
-- **Audit Trail** — structured JSONL logging and local SQLite dataset
-- **Agent Security Checker** — config audit, skill scanning, toxic flow analysis, allowlist mode
-
-[![PyPI](https://img.shields.io/pypi/v/spidershield)](https://pypi.org/project/spidershield/) · [GitHub](https://github.com/teehooai/spidershield)
-
-
-### SpiderRating
-Security index and certification platform for AI agents and tool ecosystems.
-
-- **Rating Engine** — certification scoring (F/D/C/B/A) with calibrated ground truth
-- **Enterprise Dashboard** — multi-agent fleet security visibility and management
-- **Certification API** — badge issuance, compliance reporting, EU AI Act readiness
-- **Advanced Analytics** — behavioral baselines, anomaly detection, fleet intelligence
+> [teehooai.com](https://www.teehooai.com) · No outside investors. No growth-at-all-costs roadmap. We build, ship, and operate the things below ourselves.
 
 ---
 
-## Focus
+## Products
 
-- AI Agent Security
-- AI Infrastructure
-- Financial AI Systems
-- Prediction Systems
+### Agent Security
+- **[SpiderShield](https://github.com/teehooai/spidershield)** — Scan, rate, and harden MCP servers. Static scanner with 46 codes, runtime tool-call firewall, transparent MCP proxy, DLP, audit trail. [![PyPI](https://img.shields.io/pypi/v/spidershield)](https://pypi.org/project/spidershield/)
+- **SpiderRating** — Security index and certification for AI agents, tools, and skills. EU AI Act-ready reporting.
+- **[awesome-mcp-security](https://github.com/teehooai/awesome-mcp-security)** — Curated MCP server security resources.
 
----
+### AI-Native Martech
+- **Teehoo Martech** — AI-Native Martech Platform — AI Brand Monitor + 9,800+ provider directory.
+- **[SpiderCPS](https://spidercps.com)** — AI-native CPS affiliate network for North America. 20% flat take, USD settlement.
+- **[SpiderGig](https://spidergig.com)** — Bilingual freelance marketplace bridging Chinese-speaking talent and global brands.
+- **SpiderRemote** — Curated remote-work aggregator for Chinese-speaking talent.
+- **[Hired Local Pros](https://hiredlocalpros.com)** — AI-matched local services marketplace.
+- **[SpiderAsk](https://spiderask.com)** — Bilingual life assistant for overseas Chinese. Plus a personal twin agent.
+- **[Panda Deals Daily](https://pandadealsdaily.com)** — Bilingual deals editorial. Verified price drops only.
 
-## Vision
+### AI Financial Systems
+- **Fullhouse Asset** — AI hedge fund. Autonomous trading research and execution.
+- **AI Quant Lab** — Autonomous alpha factor discovery via overnight research loops.
+- **Teehoo Core Shell** — Explainable alpha & risk. Event-driven causal narratives.
+- **Fullhouse Sports** — AI sports prediction. Model-driven edge discovery.
 
-AI agents will interact with tools, APIs, and systems across the internet.
-
-SpiderShield aims to provide the security infrastructure that makes this safe.
+### Local Services
+- **R&R Site Network** — Single-niche local service sites (pool cleaning, drain cleaning) operated from a shared template.
+- **Fullhouselife** — 海外华人本地生活服务 directory.
 
 ---
 
 ## Location
 
-Los Angeles
+Los Angeles, California · Fullhouse Asset Management LLC
 
 ---
 
-[spidershield.dev](https://spidershield.dev) · [PyPI](https://pypi.org/project/spidershield/)
+## This repository
+
+Source for [teehooai.com](https://www.teehooai.com) — the public website.
+
+```bash
+pnpm install
+pnpm dev          # http://localhost:3050
+pnpm build        # static export to ./out
+```
+
+Stack: Next.js 15 (App Router, SSG) · React 19 · Tailwind CSS 4 · Cloudflare Pages.
+
+Deploy:
+
+```bash
+pnpm build
+npx wrangler pages deploy out --project-name=teehooai --branch=main --commit-dirty=true
+```

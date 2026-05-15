@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/*
+ * Teehoo AI design system — white / silver body + black ink + champagne gold accent.
+ *
+ * Palette:
+ *   #ffffff  paper            — pure white background
+ *   #f6f6f7  paper-2          — silver wash (section bands / cards)
+ *   #ffffff  card             — surface lift
+ *   #0a0a0a  ink              — near-black, primary text + strong CTAs
+ *   #404048  ink-soft         — secondary text
+ *   #71717a  ink-dim          — tertiary text, meta
+ *   #a8a29e  ink-mute         — disabled / decorative
+ *   #e7e7ea  rule             — silver borders
+ *   #f0f0f2  rule-soft        — subtle dividers
+ *   #b08d57  accent           — champagne gold (Teehoo brand mark)
+ *   #8c6f43  accent-hover     — darker gold for hover states
+ *   #f6efe2  accent-soft      — subtle gold wash
+ *   #d4b87a  accent-bright    — bright gold highlight (rare use)
+ *   #0d7c4f  accent-green     — open-source / live signals
+ */
+
+:root {
+  --th-paper:         #ffffff;
+  --th-paper-2:       #f6f6f7;
+  --th-card:          #ffffff;
+  --th-ink:           #0a0a0a;
+  --th-ink-soft:      #404048;
+  --th-ink-dim:       #71717a;
+  --th-ink-mute:      #a8a29e;
+  --th-rule:          #e7e7ea;
+  --th-rule-soft:     #f0f0f2;
+  --th-accent:        #b08d57;
+  --th-accent-hover:  #8c6f43;
+  --th-accent-soft:   #f6efe2;
+  --th-accent-bright: #d4b87a;
+  --th-accent-green:  #0d7c4f;
+}
+
+@theme {
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Helvetica Neue", system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), "Iowan Old Style", "Source Serif Pro",
+    Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, "SF Mono",
+    Menlo, Consolas, "Liberation Mono", monospace;
+
+  --color-th-paper:        var(--th-paper);
+  --color-th-paper-2:      var(--th-paper-2);
+  --color-th-card:         var(--th-card);
+  --color-th-ink:          var(--th-ink);
+  --color-th-ink-soft:     var(--th-ink-soft);
+  --color-th-ink-dim:      var(--th-ink-dim);
+  --color-th-ink-mute:     var(--th-ink-mute);
+  --color-th-rule:         var(--th-rule);
+  --color-th-rule-soft:    var(--th-rule-soft);
+  --color-th-accent:        var(--th-accent);
+  --color-th-accent-hover:  var(--th-accent-hover);
+  --color-th-accent-soft:   var(--th-accent-soft);
+  --color-th-accent-bright: var(--th-accent-bright);
+  --color-th-accent-green:  var(--th-accent-green);
+}
+
+html {
+  font-feature-settings: "ss01", "cv11";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--th-paper);
+  color: var(--th-ink);
+}
+
+::selection {
+  background: var(--th-accent-soft);
+  color: var(--th-accent-hover);
+}
+
+/* Editorial serif display — used sparingly for hero + section headlines. */
+.font-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.028em;
+  font-feature-settings: "ss01";
+}
+
+/* Monospace meta — repo names, tags, version numbers. */
+.font-mono-tag {
+  font-family: var(--font-mono);
+  font-feature-settings: "ss01", "ss02";
+  letter-spacing: -0.01em;
+}
+
+/* Subtle grid background for hero section. */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--th-rule-soft) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--th-rule-soft) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: -1px -1px;
+}
